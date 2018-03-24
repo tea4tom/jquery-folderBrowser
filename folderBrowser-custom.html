@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+	
+	<head>
+		<title>jquery folderBrowser Download</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	    <meta name="description" content="Free download for a jquery plugin that displays folders and files.">
+	    <meta name="keywords" content="folder, browser, explorer, jquery, plugin, download, listview, lists, files, directories, search">
+	    <meta name="author" content="tea4tom.com">
+
+		<link rel="stylesheet" type="text/css" href="folderBrowser-customico.css" />
+
+		<style>
+		.folderBrowser {
+			width: 640px;
+			height: 480px;
+			border-radius: 15px;
+			border: thin solid #c0c0c0;
+		}
+		a.big {
+			display: inline-block;
+			font-size: 1.8em;
+			text-decoration: none;
+			padding: 3px;
+			border: thin solid #00c000;
+			background: rgba(0, 255, 0, 0.25);
+			border-radius: 5px;
+			color: #ffffff;
+			font-weight: bold;
+		}
+		a.big:hover {
+			text-decoration: none;
+			background: rgba(0, 255, 0, 0.75);
+			border-radius: 5px;
+			color: #ffffff;
+		}
+		</style>
+
+	</head>
+
+	<body>
+		
+		<div style="width: 800px; margin: 0 auto;">
+			<h1>Folder browser 1.0.0-rc.1</h1>
+
+			<p>This is a jquery plugin to enable folder browsing with a similar experience to desktop file managers. In this configuration this class will browse folders on a server based on a root that you specify. The server side script which is used to retrieve directory listings in a array could be modified to return various datasets.</p>
+
+			<p>This page contains uses a custom icon CSS and the relevant class options defined during
+			class initialisation. This configuration is <b>not</b> dependant on fontAwesome and demonstrates
+			how any iconset can be substituted. The icons used in this demo are from 
+			<a href="http://www.famfamfam.com/" target="_blank">FamFamFam</a> and are high quality despite being a bit small for this example.</p>
+
+			<h4>Custom Icon Classes Demo:</h4>
+
+			<div id="listFolders" class="folderBrowser"></div>
+
+			<p><a href="index.html">Go back to Instructions Page</a></p>
+
+			<p><strong>Download</strong></br>
+				<a href="http://www.tea4tom.com/resources/code/jquery-folderBrowser-1.2.0c.zip" class="big" target="_blank">
+					Download (v1.2.0)
+				</a><br>
+				<a href="http://www.tea4tom.com/resources/code/jquery-folderBrowser-1.2.0.zip" target="_blank">
+					Download (v1.2.0) w/o Custom Icon set
+				</a>
+			</p>
+
+		</div>
+
+		<div style="width: 800px; margin: 0 auto;">
+			<h1>tea4tom.com</h1>
+
+			<p>Is a personal website providing information on independent IT services and consultation. For more information follow the link below to the domain homepage.</p>
+
+			<a href="http://www.tea4tom.com/" class="big">
+				tea4tom Homepage
+			</a>
+
+		</div>
+
+	</body>
+
+	<script src="jquery.min.js"></script>
+	<script src="fontawesome-all.js"></script>
+	<script src="jquery-folderBrowser-1.0.0-rc.1.js"></script>
+
+	<script>
+
+	$('#listFolders').folderBrowser({
+		rootpath: '/',
+		script: 'folderBrowser.php',
+		display: 'icons',
+		showtoolbar: true,
+		icontype: 'div',
+        foldersclass: 'cfileclass-all cfileclass-directory',
+        folderreturnclass: 'cfileclass-all cfileclass-goback',
+        filesclass: {
+        	star: 'cfileclass-all cfileclass-file',
+        	php: 'cfileclass-all cfileclass-php',
+			css: 'cfileclass-all cfileclass-css',
+			js: 'cfileclass-all cfileclass-script',
+			htm: 'cfileclass-all cfileclass-html',
+			html: 'cfileclass-all cfileclass-html',
+			pdf: 'cfileclass-all cfileclass-pdf',
+			zip: 'cfileclass-all cfileclass-zip',
+			z: 'cfileclass-all cfileclass-zip',
+			rar: 'cfileclass-all cfileclass-zip',
+			arj: 'cfileclass-all cfileclass-zip',
+			mp3: 'cfileclass-all cfileclass-music',
+			wav: 'cfileclass-all cfileclass-music',
+			mid: 'cfileclass-all cfileclass-music',
+			c: 'cfileclass-all cfileclass-code',
+			vb: 'cfileclass-all cfileclass-code',
+			vbs: 'cfileclass-all cfileclass-code',
+			asp: 'cfileclass-all cfileclass-code',
+			inc: 'cfileclass-all cfileclass-code',
+			xls: 'cfileclass-all cfileclass-xls',
+			ods: 'cfileclass-all cfileclass-xls',
+			xlsx: 'cfileclass-all cfileclass-xls',
+			doc: 'cfileclass-all cfileclass-doc',
+			docx: 'cfileclass-all cfileclass-doc',
+			odt: 'cfileclass-all cfileclass-doc',
+			rtf: 'cfileclass-all cfileclass-doc',
+			jpg: 'cfileclass-all cfileclass-picture',
+			jpeg: 'cfileclass-all cfileclass-picture',
+			gif: 'cfileclass-all cfileclass-picture',
+			png: 'cfileclass-all cfileclass-picture',
+			bmp: 'cfileclass-all cfileclass-picture',
+			svg: 'cfileclass-all cfileclass-picture',
+			ppt: 'cfileclass-all cfileclass-ppt',
+			avi: 'cfileclass-all cfileclass-film',
+			mp4: 'cfileclass-all cfileclass-film',
+			fla: 'cfileclass-all cfileclass-film',
+			mpg: 'cfileclass-all cfileclass-film',
+			mpeg: 'cfileclass-all cfileclass-film',
+			mov: 'cfileclass-all cfileclass-film'
+        },
+        toolbaricons: {
+        	viewmode: [
+        		'cfbr-toolbar-all-buttons cfbr-toolbar-viewmode-icons',
+        		'cfbr-toolbar-all-buttons cfbr-toolbar-viewmode-list',
+        		'cfbr-toolbar-all-buttons cfbr-toolbar-viewmode-detail'],
+			search: 'cfbr-toolbar-all-buttons cfbr-toolbar-search',
+			options: 'cfbr-toolbar-all-buttons cfbr-toolbar-options'
+        }
+	},/* evSel */ function(itm) {
+		if(itm===null) {
+			console.log('Nothing selected.');
+		} else {
+			console.log('Selected: ' + itm.name);
+		}
+	},/* evFileDblClk */ function(itm) {
+		console.log('File double clicked: ' + itm.name);
+		alert(itm.name + '\r\n' + itm.fullpath);
+	},/* evChange */ function(newpath) {
+		console.log('Path changed: ' + newpath);
+	},/* evMenu */ function(selitm, curpath) {
+		console.log('Menu clicked: ' + curpath);
+		if(selitm!==null) console.log('Menu item: ' + selitm.name);
+	});
+
+	</script>
+
+</html>
